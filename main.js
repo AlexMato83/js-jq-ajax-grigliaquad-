@@ -15,6 +15,7 @@ $(document).ready(function(){
         // salvo il numero generato
         var numeroGenerato = data.response;
         console.log(numeroGenerato);
+        $(bloccoCliccato).append(numeroGenerato);
         if (numeroGenerato <= 5){
           bloccoCliccato.addClass("giallo");
         } else {

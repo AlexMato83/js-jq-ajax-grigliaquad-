@@ -1,5 +1,4 @@
-// se utente clicca 2 volte sullo stesso rettangolo lo mando
-//  a ca… gli dico che non si può;
+
 // generare dinamicamente la griglia dei quadrati;
 // Curo per bene l’output, creando un layout carino;
 // varie che vi vengono in mente per sperimentare;
@@ -8,7 +7,7 @@
 $(document).ready(function(){
     // creo evento click sui blocchi
   $(".blocco").click(function(){
-    if ($(this).hasClass("giallo", "verde")){
+    if ($(this).hasClass("verde") || $(this).hasClass("giallo")){
       alert("mi scusi buon uomo ma questo blocco è già stato cliccato, veda di non fare il furbo");
     } else {
       // salvo il blocco su cui clicco

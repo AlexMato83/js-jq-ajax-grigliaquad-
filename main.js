@@ -1,7 +1,5 @@
-// ad ogni click (su ogni rettangolino) parte una richiesta AJAX che prende un numero random
-// da 1 a 9 (primo end-point della API in slide).
-// Se il num ritornato è <= 5 il quadrato diventa giallo,
-// se è > di 5 il quadrato diventa verde.
+
+
 // Il numero ottenuto appare al centro del quadrato
 $(document).ready(function(){
   // creo evento click sui blocchi
@@ -17,6 +15,12 @@ $(document).ready(function(){
         // salvo il numero generato
         var numeroGenerato = data.response;
         console.log(numeroGenerato);
+        if (numeroGenerato <= 5){
+          bloccoCliccato.addClass("giallo");
+        } else {
+          bloccoCliccato.addClass("verde");
+
+        }
       },
       error : function (richiesta,stato,errori){
         console.log("l'errore è : " + errori);
